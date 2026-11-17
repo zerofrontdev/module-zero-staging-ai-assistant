@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © 2026 Roman Pasichnyk
+    SPDX-License-Identifier: OSL-3.0 OR AFL-3.0
+
+    The AI Assistant tools for Zero_Staging. \Proxy: a tool is built only when it runs, and `requires` hides it
+    while Zero_Staging is disabled (its di.xml and services are then not loaded).
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Zero\AiAssistant\Model\Tools">
+        <arguments>
+            <argument name="tools" xsi:type="array">
+                <item name="list_campaigns" xsi:type="object" sortOrder="1410">Zero\StagingAiAssistant\Model\Tool\ListCampaigns\Proxy</item>
+                <item name="schedule_change" xsi:type="object" sortOrder="1420">Zero\StagingAiAssistant\Model\Tool\ScheduleChange\Proxy</item>
+            </argument>
+            <argument name="requires" xsi:type="array">
+                <item name="list_campaigns" xsi:type="string">Zero_Staging</item>
+                <item name="schedule_change" xsi:type="string">Zero_Staging</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
