@@ -1,7 +1,7 @@
 # Changelog: zerofront/module-zero-staging-ai-assistant
 
-## 1.0.5
+## 1.3.12
 
-- New: the Staging tools of the AI Assistant (`list_campaigns`, `schedule_change`), as they were in the AI Assistant. Needs Zero Staging.
+- Now free and public: the AI Assistant's and the Claude connector's tools for Zero Staging (`list_campaigns`, `schedule_change`).
 
-Earlier releases (1.0.3 and before): no release notes.
+Earlier releases (1.3.5 and before): see the Git tags.
